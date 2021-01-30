@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 
 let command;
 
-if (process.env.NODE_ENV === 'prod') {
+if (process.env.NODE_ENV === 'production') {
     command = exec('ng build --aot --configuration=production');
 } else if (process.env.NODE_ENV === 'dev') {
     command = exec('ng build --aot --configuration=dev');
